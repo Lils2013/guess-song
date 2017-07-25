@@ -5,12 +5,6 @@
 	version="1.0">
 
 	<persistence-unit name="guesssong" transaction-type="RESOURCE_LOCAL">
-		<!--<provider>org.hibernate.ejb.HibernatePersistence</provider>-->
-		<!--<properties>-->
-			<!--<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />-->
-			<!--<property name="hibernate.show_sql" value="true"/>-->
-			<!--<property name="hibernate.format_sql" value="true"/>-->
-		<!--</properties>-->
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 
@@ -24,7 +18,7 @@
 			<!--Hibernate properties-->
 			<property name="hibernate.show_sql" value="false"/>
 			<property name="hibernate.format_sql" value="false"/>
-			<property name="hibernate.hbm2ddl.auto" value="create"/>
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
 
 		</properties>

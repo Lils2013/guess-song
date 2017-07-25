@@ -36,6 +36,18 @@ public class User implements UserDetails {
 	@Column(name = "ROLE")
 	private String role;
 
+	public Long getHighScore() {
+		return highScore;
+	}
+
+	public void setHighScore(Long highScore) {
+		this.highScore = highScore;
+	}
+
+	@Column(name = "HIGH_SCORE")
+	private Long highScore;
+
+
 	public String getFirstName() {
 		return firstName;
 	}

@@ -56,7 +56,7 @@
 			</div>
 			<sec:csrfInput/>
 
-			<button type="submit" id="btn-save" class="btn btn-primary">Login</button>
+			<button type="submit" id="btn-save" class="btn btn-primary">Register</button>
 		</form>
 	</div>
 </body>

@@ -19,6 +19,7 @@
 	
 	<jsp:include page="../views/fragments/header.jsp"></jsp:include>
 	<div class="container">
+        <h1>High Score: ${sessionScope.high_score}</h1>
         <h2>Score: ${sessionScope.score}</h2>
         <c:if test="${sessionScope.result != null}">
             <h2>${sessionScope.result}</h2>

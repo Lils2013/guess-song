@@ -20,7 +20,7 @@ import java.util.Random;
 public class HomeController {
 
     @Autowired
-    private UserRepository repo;
+    private UserRepository userRepository;
 
 	@RequestMapping("/")
 	public String goHome(){
@@ -35,7 +35,8 @@ public class HomeController {
     @RequestMapping(value="/register", method=RequestMethod.POST)
     public String register(@ModelAttribute User user){
         user.setRole("ROLE_USER");
-        repo.save(user);
+        user.setHighScore(0L);
+        userRepository.save(user);
         Authentication auth = new UsernamePasswordAuthenticationToken(user,
                 user.getPassword(), user.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(auth);
